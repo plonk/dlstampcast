@@ -1,0 +1,12 @@
+<% if File.exist? "public/archives/room#{params[:id]}.zip" %>
+  <a href="/dl/<%= params[:id] %>">ZIPをダウンロード</a>
+<% else %>
+  <% if $JOB[:pid] %>
+    現在ルーム <%= $JOB[:room] %> のZIPを作成中です。数分後に再読み込みしてみてください。
+    <del>ZIPを作成</del>
+  <% else %>
+    <a href="/build/<%= params[:id] %>">ZIPを作成</a>
+  <% end %>
+<% end %>
+
+

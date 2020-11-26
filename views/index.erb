@@ -1,0 +1,10 @@
+<p>部屋番号を入力してください。</p>
+<form action="/goroom" method="GET">
+  <input type="text" name="no"><input type=submit>
+</form>
+
+<% if $JOB[:pid] %>
+  <p>現在ルーム <%= $JOB[:room] %> のZIPを作成中です。</p>
+<% else %>
+  <p>お仕事募集中。</p>
+<% end %>
