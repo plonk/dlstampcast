@@ -1,0 +1,12 @@
+main.rb にスタンプキャストの部屋番号を指定すると
+スタンプがダウンロードされて zip になります。
+
+ruby main.rb 20
+とすると public/archives/room20.zip が作成される。
+
+Webインターフェイスは rackup コマンドで起動します。
+これとは別にApacheのDocumentRootが public/ ディレクトリを
+指していることが想定されています。
+
+cache/ ディレクトリはダウンロードした画像ファイルを
+キャッシュします。
